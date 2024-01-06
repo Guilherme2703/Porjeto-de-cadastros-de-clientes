@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block 'conteudo' %}
+<div class="container">    
+    <div class="row">
+    {% for atendente in object_list %}
+    <div class="col-sm-4">
+        <div class="panel panel-danger">
+          <div class="panel-heading">{{atendente.nome}}</div>
+          <div class="panel-body">{{atendente.email}}</div>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+  <br>
+{% endblock 'conteudo' %}
